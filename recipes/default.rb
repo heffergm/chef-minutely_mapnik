@@ -8,9 +8,5 @@
 #
 
 include_recipe 'minutely_mapnik::structure'
+include_recipe 'minutely_mapnik::config'
 
-cookbook_file "#{node[:minutely_mapnik][:basedir]}/bin/update.sh" do
-  action :create
-  source 'update.sh'
-  mode 0755
-end
