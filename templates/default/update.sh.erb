@@ -4,7 +4,7 @@
 
 PIDFILE=`basename $0`.pid
 PIDEXPIREFILE=/tmp/expiry.pid
-BASEDIR=<%= node[:minutely_mapnik][:basedir] %>/minutely_mapnik
+BASEDIR=<%= node[:minutely_mapnik][:basedir] %>
 LOGDIR=$BASEDIR/logs
 
 OSMOSIS=/opt/osmosis/bin/osmosis
@@ -16,11 +16,11 @@ OSMOSISLOG=$LOGDIR/osmosis.log
 PSQLLOG=$LOGDIR/osm2pgsql.log
 RUNLOG=$LOGDIR/run.log
 
-CURRENT=/tmp/osm-load-next.$$.osc
+CURRENT=$OSMOSIS_WORKDIR/osm-load-next.$$.osc
 EXPIRE=1
-EXPIRE_LIST=/tmp/osm-load-next.$$.expire
-EXPIRE_DAILY=/tmp/osm-load-daily.expire
-EXPIRE_WEEKLY=/tmp/osm-load-weekly.expire
+EXPIRE_LIST=$OSMOSIS_WORKDIR/osm-load-next.$$.expire
+EXPIRE_DAILY=$OSMOSIS_WORKDIR/osm-load-daily.expire
+EXPIRE_WEEKLY=$OSMOSIS_WORKDIR/osm-load-weekly.expire
 
 #############################################################
 
