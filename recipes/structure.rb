@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-directory '/var/lib/minutely_mapnik' do
+directory "#{node[:minutely_mapnik][:basedir]}" do
   action :create
   owner 'postgres'
   group 'postgres'
@@ -15,7 +15,7 @@ directory '/var/lib/minutely_mapnik' do
 end
 
 %w(bin logs osmosis).each do |d|
-  directory d do
+  directory "#{node[:minutely_mapnik][:basedir]}/#{d}" do
     action :create
     owner 'postgres'
     group 'postgres'

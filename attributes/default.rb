@@ -1,1 +1,1 @@
-default[:minutely_mapnik][:basedir] = '/var/lib/postgresql'
+default[:minutely_mapnik][:basedir] = '/var/lib/postgresql/minutely_mapnik'
