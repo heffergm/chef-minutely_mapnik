@@ -9,16 +9,16 @@
 
 directory '/var/lib/minutely_mapnik' do
   action :create
-  owner :postgres
-  group :postgres
+  owner 'postgres'
+  group 'postgres'
   mode 0644
 end
 
 %w(bin logs osmosis).each do |d|
   directory d do
     action :create
-    owner :postgres
-    group :postgres
+    owner 'postgres'
+    group 'postgres'
     mode 0644
   end
 end
