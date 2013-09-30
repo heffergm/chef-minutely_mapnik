@@ -4,7 +4,7 @@ maintainer_email 'grant@mapzen.com'
 license          'All rights reserved'
 description      'Installs/Configures minutely_mapnik'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.1.2'
+version          '0.1.3'
 
 %w{ postgiswrap osmosis osm2pgsql }.each do |dep|
   depends dep
