@@ -15,7 +15,7 @@ template "#{node[:minutely_mapnik][:basedir]}/bin/update.sh" do
   mode 0755
 end
 
-cookbook_file "#{node[:minutely_mapnik][:basedir]}/bin/configuration.txt" do
+cookbook_file "#{node[:minutely_mapnik][:basedir]}/osmosis/configuration.txt" do
   owner 'postgres'
   group 'postgres'
   action :create

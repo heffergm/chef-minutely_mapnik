@@ -11,7 +11,7 @@ directory "#{node[:minutely_mapnik][:basedir]}" do
   action :create
   owner 'postgres'
   group 'postgres'
-  mode 0644
+  mode 0755
 end
 
 %w(bin logs osmosis).each do |d|
@@ -19,6 +19,6 @@ end
     action :create
     owner 'postgres'
     group 'postgres'
-    mode 0644
+    mode 0755
   end
 end
